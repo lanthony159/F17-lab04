@@ -99,7 +99,7 @@ public class PictureComponent extends JComponent
 
 
 
-        g2.drawString("Description and your name go here", 20,20);
+        g2.drawString("Porter the Artist's Snowman", 20,20);
 	
     }
 }

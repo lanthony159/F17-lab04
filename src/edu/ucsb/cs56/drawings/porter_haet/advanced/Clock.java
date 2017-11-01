@@ -31,9 +31,19 @@ public class Clock extends GeneralPathWrapper implements Shape {
 
         clock.append(ellipse2D, false);
 
+        double rnW = width/10;
+        double rnH = height/10;
         for (int i = 1; i <= 12; i++) {
+            double radians = i * (2*Math.PI) / 12;
 
+            double rnX = (x + width/2) + width*Math.sin(radians)*.4;
+            double rnY = (y + height/2) - width*Math.cos(radians)*.4;
+            Shape s = new RomanNumeralNumber(i, rnX - rnW/2, rnY - rnH/2, rnW, rnH);
+
+            clock.append(s, false);
         }
+
+        
 
         this.set(clock);
 

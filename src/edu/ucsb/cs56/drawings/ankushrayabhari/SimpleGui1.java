@@ -26,9 +26,9 @@ public class SimpleGui1 {
 	button.setBackground(myColor);
 	button.setOpaque(true);
 
-	frame. setDefaultCloseOperation(JFrame. EXIT_ON_CLOSE) ;
-	frame. getContentPane() . add(button) ;
-	frame. setSize(300,300) ;
-	frame. setVisible(true) ;
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.getContentPane().add(button);
+	frame.setSize(300,300);
+	frame.setVisible(true);
     }
 }

@@ -16,14 +16,18 @@ public class RomanNumeralNumber extends GeneralPathWrapper implements Shape {
 
         for (int i = 0; i < letters.length(); i++) {
             char letter = letters.charAt(i);
+            double rw = w/letters.length();
+            double rh = h;
+            double rx = x + i*rw;
+            double ry = y;
             if (letter == 'I') {
-                numbers.append(new RomanNumeralI(x + i*w/letters.length(), y, w/letters.length(), h), false);
+                numbers.append(new RomanNumeralI(rx, ry, rw, rh), false);
             }
             else if (letter == 'V') {
-                numbers.append(new RomanNumeralV(x + i*w/letters.length(), y, w/letters.length(), h), false);
+                numbers.append(new RomanNumeralV(rx, ry, rw, rh), false);
             }
             else if (letter == 'X') {
-                numbers.append(new RomanNumeralX(x + i*w/letters.length(), y, w/letters.length(), h), false);
+                numbers.append(new RomanNumeralX(rx, ry, rw, rh), false);
             }
             else {
                 System.out.println("Unknown RomanNumeral character: " + letter);

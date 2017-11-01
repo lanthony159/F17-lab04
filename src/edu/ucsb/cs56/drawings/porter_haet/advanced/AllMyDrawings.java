@@ -12,143 +12,129 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
- * @version for UCSB CS56, W16 
+ * @author Phill Conrad
+ * @author Porter Haet
+ * @version for UCSB CS56, F17
  */
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+
+    /** Draw a picture with a few clocks
      */
     
     public static void drawPicture1(Graphics2D g2) {
 
-    	Clock clock = new Clock(100, 250, 100, 100, 6, 25);
-    	g2.setColor(Color.BLACK);
-    	g2.draw(clock);
-	
-//	House h1 = new House(100,250,50,75);
-//	g2.setColor(Color.CYAN); g2.draw(h1);
-//
-//	// Make a black house that's half the size,
-//	// and moved over 150 pixels in x direction
-//
-//	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-//	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-//	g2.setColor(Color.BLACK); g2.draw(h2);
-//
-//	// Here's a house that's 4x as big (2x the original)
-//	// and moved over 150 more pixels to right.
-//	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-//	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-//
-//	// We'll draw this with a thicker stroke
-//	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
-//
-//	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-//	// #002FA7 is "International Klein Blue" according to Wikipedia
-//	// In HTML we use #, but in Java (and C/C++) its 0x
-//
-//	Stroke orig=g2.getStroke();
-//	g2.setStroke(thick);
-//	g2.setColor(new Color(0x002FA7));
-//	g2.draw(h2);
-//
-//	// Draw two houses with Windows
-//
-//	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-//	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-//
-//	g2.draw(hw1);
-//	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
-//
-//	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-//
-//	g2.setStroke(orig);
-//	g2.setColor(Color.BLACK);
-//	g2.drawString("A few houses by Phill Conrad", 20,20);
+		Clock clock = new GrandFatherClock(100, 0, 100, 300, 6,15);
+		g2.setColor(Color.BLACK);
+		g2.draw(clock);
+
+		Clock clock2 = new GrandFatherClock(200, 150, 100, 200, 4, 45);
+		g2.setColor(Color.BLUE);
+		g2.draw(clock2);
+
+		Clock clock3 = new GrandFatherClock(300, 50, 100, 250, 3, 25);
+		g2.setColor(Color.RED);
+		g2.draw(clock3);
+
+		Clock clock4 = new GrandFatherClock(400, 350, 100, 300, 2, 15);
+		g2.setColor(Color.GREEN);
+		g2.draw(clock4);
+
+		Clock clock5 = new GrandFatherClock(100, 550, 100, 150, 7, 25);
+		g2.setColor(Color.GRAY);
+		g2.draw(clock5);
+
+		Clock clock6 = new GrandFatherClock(320, 250, 100, 200, 8, 25);
+		g2.setColor(Color.PINK);
+		g2.draw(clock6);
+
+		g2.setColor(Color.BLACK);
+		g2.drawString("The most beautiful collection of grandfather clocks I have ever seen by Porter Haet", 20,20);
     }
     
     
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture with some clocks and grandfather clocks
      */
     public static void drawPicture2(Graphics2D g2) {
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); 
-	
-	// Rotate the second house 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-	
-	g2.draw(hw3);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
+    	Stroke original = g2.getStroke();
+		Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+
+
+		Color c1 = Color.BLACK;
+		Color c2 = Color.PINK;
+		for (double y = 0; y < 700; y += 100) {
+			int hour = (int) (12*Math.random()), minute = (int) (60*Math.random());
+			Clock clock = new Clock(0, y, 100, 100, hour, minute);
+
+			double mix = y/700;
+
+			Color c = new Color((int) (c1.getRed() * mix + c2.getRed() * (1-mix)),
+					(int) (c1.getGreen() * mix + c2.getGreen() * (1-mix)),
+					(int) (c1.getBlue() * mix + c2.getBlue() * (1-mix)),
+                    255
+					);
+
+			g2.setStroke(thick);
+			g2.setColor(c);
+			g2.draw(clock);
+		}
+
+		c1 = Color.BLUE;
+		c2 = Color.RED;
+		for (double y = 0; y < 700; y += 100) {
+			int hour = (int) (12*Math.random()), minute = (int) (60*Math.random());
+			Clock clock = new Clock(540, y, 100, 100, hour, minute);
+
+			double mix = y/700;
+
+			Color c = new Color((int) (c1.getRed() * mix + c2.getRed() * (1-mix)),
+					(int) (c1.getGreen() * mix + c2.getGreen() * (1-mix)),
+					(int) (c1.getBlue() * mix + c2.getBlue() * (1-mix)),
+					255
+			);
+
+			g2.setStroke(thick);
+			g2.setColor(c);
+			g2.draw(clock);
+		}
+
+		int hour = (int) (12*Math.random()), minute = (int) (60*Math.random());
+		Clock grand = new GrandFatherClock(250, 0, 100, 600, hour, minute);
+		g2.draw(grand);
+
+
+		hour = (int) (12*Math.random());
+		minute = (int) (60*Math.random());
+		grand = new GrandFatherClock(450, 50, 100, 300, hour, minute);
+		g2.draw(grand);
+
+    	g2.setStroke(original);
+    	g2.setColor(Color.BLACK);
+		g2.drawString("An assortment of clocks and grandfather clocks", 250,20);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a different picture with the grandfather clocks as hands
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
-	// label the drawing
+		// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-	
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
-    }       
+		g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+
+		int hour = (int) (12*Math.random()), minute = (int) (60*Math.random());
+		Clock clock = new Clock(0, 0, 640, 480, hour, minute);
+
+		Clock hand = new GrandFatherClock(640/2 - 35, 480/2 - 480*.2, 70, 480*.4, hour, minute);
+		double radians = Clock.radians(hour, minute);
+		Shape shape = ShapeTransforms.rotatedCopyOf(hand, radians);
+		shape = ShapeTransforms.translatedCopyOf(shape, 35 * Math.sin(radians), -480*.2 * Math.cos(radians));
+
+
+		g2.draw(clock);
+		g2.draw(shape);
+
+
+    }
 }

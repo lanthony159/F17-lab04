@@ -42,7 +42,7 @@ public class Clock extends GeneralPathWrapper implements Shape {
             double radians = radians(i, 0);
 
             double rnX = centerX + width*Math.sin(radians)*.4;
-            double rnY = centerY - width*Math.cos(radians)*.4;
+            double rnY = centerY - height*Math.cos(radians)*.4;
             Shape s = new RomanNumeralNumber(i, rnX - rnW/2, rnY - rnH/2, rnW, rnH);
 
             clock.append(s, false);
@@ -63,11 +63,11 @@ public class Clock extends GeneralPathWrapper implements Shape {
     }
 
 
-    private static double radians(int hour, int minute) {
+    static double radians(int hour, int minute) {
         return hour * (2 * Math.PI) / 12 + radians(minute) / 60;
     }
 
-    private static double radians(int minute) {
+    static double radians(int minute) {
         return minute * (2*Math.PI) / 60;
     }
 }

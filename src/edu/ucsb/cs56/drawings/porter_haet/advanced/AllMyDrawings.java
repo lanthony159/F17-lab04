@@ -23,7 +23,7 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 
-    	Clock clock = new Clock(100, 250, 100, 100);
+    	Clock clock = new Clock(100, 250, 100, 100, 6, 25);
     	g2.setColor(Color.BLACK);
     	g2.draw(clock);
 	

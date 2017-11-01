@@ -121,19 +121,24 @@ public class AllMyDrawings
 	
 		// label the drawing
 	
-		g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+		g2.drawString("Grandfather clocks as hands by Porter Haet", 20,20);
 
 		int hour = (int) (12*Math.random()), minute = (int) (60*Math.random());
-		Clock clock = new Clock(0, 0, 640, 480, hour, minute);
+		Clock clock = new Clock(80, 0, 480, 480, hour, minute);
 
-		Clock hand = new GrandFatherClock(640/2 - 35, 480/2 - 480*.2, 70, 480*.4, hour, minute);
+		Clock hand = new GrandFatherClock(80 + 480/2 - 25, 480/2 - 480*.1, 50, 480*.2, hour, minute);
 		double radians = Clock.radians(hour, minute);
 		Shape shape = ShapeTransforms.rotatedCopyOf(hand, radians);
-		shape = ShapeTransforms.translatedCopyOf(shape, 35 * Math.sin(radians), -480*.2 * Math.cos(radians));
+		shape = ShapeTransforms.translatedCopyOf(shape, 480*.1*Math.sin(radians), -480*.1 * Math.cos(radians));
+		g2.draw(shape);
 
+		hand = new GrandFatherClock(80 + 480/2 - 25, 480/2 - 480*.2, 50, 480*.4, hour, minute);
+		radians = Clock.radians(minute);
+		shape = ShapeTransforms.rotatedCopyOf(hand, radians);
+		shape = ShapeTransforms.translatedCopyOf(shape, 480*.2*Math.sin(radians), -480*.2 * Math.cos(radians));
+		g2.draw(shape);
 
 		g2.draw(clock);
-		g2.draw(shape);
 
 
     }

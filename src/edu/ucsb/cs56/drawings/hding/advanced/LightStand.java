@@ -51,7 +51,7 @@ public class LightStand extends GeneralPathWrapper implements Shape
         //Make the base
         Rectangle2D.Double base = new Rectangle2D.Double( x, y+height, base_width, base_height);
         
-        // put the whole house together
+        // put the whole stand together
         
         GeneralPath stand = this.get();
         stand.append(base, false);

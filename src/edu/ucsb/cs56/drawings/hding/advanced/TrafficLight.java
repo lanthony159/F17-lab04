@@ -25,14 +25,14 @@ public class TrafficLight extends LightStand implements Shape
         GeneralPath gp = this.get();
         
         double signal_radius = .3 * width;
-        
+        // create 3 signal lights 
         Ellipse2D.Double signal1 =
         new Ellipse2D.Double(x + width/2-signal_radius/2, y + height/10-signal_radius, signal_radius, signal_radius);
         Ellipse2D.Double signal2 =
         new Ellipse2D.Double(x + width/2-signal_radius/2,y + 2*height/10-signal_radius, signal_radius, signal_radius);
         Ellipse2D.Double signal3 =
         new Ellipse2D.Double(x + width/2-signal_radius/2, y + 3*height/10-signal_radius, signal_radius, signal_radius);
-        
+        //add them to the figure
         GeneralPath stand = this.get();
         stand.append(signal1, false);
         stand.append(signal2, false);

@@ -19,7 +19,7 @@ public class WritePictureToFile
     {
 	System.out.println("Usage: java WritePictureToFile whichImage mypic");
 	// @@@ modify the next line to describe your picture
-	System.out.println(" whichImage should be 1,2 or 3");
+	System.out.println("Images 1 is a simple ball, image 2 is a basketball and image 3 is a series of basketballs with fills, differing stroke sizes and orientations");
 	System.out.println(" whichImage chooses from drawPicture1, 2 or 3");
 	System.out.println(" .png gets added to the filename");
 	System.out.println("  e.g. if you pass mypic, filename is mypic.png");

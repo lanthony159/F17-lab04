@@ -31,7 +31,7 @@ public class MultiPictureViewer
        frame.setSize(400,400); // @@@ MODIFY THIS LINE IF YOU LIKE
        
        // Set your own title
-       frame.setTitle("Phill's First Drawing"); // @@@ MODIFY THIS LINE
+       frame.setTitle("Omer's First Drawing"); // @@@ MODIFY THIS LINE
        
        // Always do this so that the red X (or red circle) works
        // to close the window. 

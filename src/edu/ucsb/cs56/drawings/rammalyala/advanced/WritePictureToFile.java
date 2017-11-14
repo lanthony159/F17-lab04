@@ -23,8 +23,8 @@ public class WritePictureToFile
 	System.out.println(" whichImage chooses from drawPicture1, 2 or 3");
 	System.out.println(" .png gets added to the filename");
 	System.out.println("  e.g. if you pass mypic, filename is mypic.png");
-	System.out.println("Example: java WritePictureToFile 3 foo");
-	System.out.println(" produces foo.png from drawPicture3");
+	System.out.println("Example: java WritePictureToFile 3 volleyballs");
+	System.out.println(" produces volleyballs.png from drawPicture3");
     }
     
     /** Write the chosen picture to a file.

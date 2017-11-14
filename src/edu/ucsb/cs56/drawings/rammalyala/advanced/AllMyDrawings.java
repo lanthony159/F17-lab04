@@ -51,13 +51,13 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(b2); 
 	
-	// Draw two tennisballs
+	// Draw two volleyballs
 	
-	Tennisball t1 = new Tennisball(100,100,20);
-	Tennisball t2 = new Tennisball(300,300,15);
+	Volleyball v1 = new Volleyball(100,100,20);
+	Volleyball v2 = new Volleyball(300,300,25);
 	
-	g2.draw(t1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(t2);
+	g2.draw(v1);
+	g2.setColor(new Color(0x8F00FF)); g2.draw(v2);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
@@ -98,18 +98,18 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(b2); 
 	
-	// Draw two tennisballs
+	// Draw two volleyballs
 	
-	Tennisball t1 = new Tennisball(250,350,30);
-	Tennisball t2 = new Tennisball(80,80,50);
+	Volleyball v1 = new Volleyball(250,350,30);
+	Volleyball v2 = new Volleyball(80,80,50);
 	
-	g2.draw(t1);
+	g2.draw(v1);
 	g2.setColor(new Color(0x8F00FF)); 
 	
 	// Rotate the second ball 45 degrees around its center.
-	Shape t3 = ShapeTransforms.rotatedCopyOf(t2, Math.PI/4.0);
+	Shape v3 = ShapeTransforms.rotatedCopyOf(v2, Math.PI/4.0);
 	
-	g2.draw(t3);
+	g2.draw(v3);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
@@ -118,7 +118,7 @@ public class AllMyDrawings
 	g2.drawString("More balls by Ram Malyala", 20,20);
     }
     
-    /** Draw a different picture with a big and a small tennisball
+    /** Draw a different picture with a big and a small volleyball
      */
     
     public static void drawPicture3(Graphics2D g2) {
@@ -128,10 +128,10 @@ public class AllMyDrawings
 	g2.drawString("Even more balls by Ram Malyala", 20,20);
 	
 	
-	// big and small tennisball
+	// big and small volleyball
 	
-	Tennisball big = new Tennisball(100,50,150);
-	Tennisball small = new Tennisball(20,50,20);
+	Volleyball big = new Volleyball(100,50,150);
+	Volleyball small = new Volleyball(20,50,20);
 	
 	g2.setColor(Color.GREEN);     g2.draw(big);
 	g2.setColor(Color.GREEN);   g2.draw(small);
